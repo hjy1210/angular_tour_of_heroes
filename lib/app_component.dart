@@ -20,7 +20,7 @@ class AppComponent implements OnInit {
   AppComponent(this._heroService);
 
   Future<void> _getHeroes() async{
-    heroes = await _heroService.getAll();
+    heroes = await _heroService.getAllSlowly();
   }
 
   void onSelect(Hero hero) => selected = hero;
